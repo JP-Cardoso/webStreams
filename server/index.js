@@ -38,7 +38,7 @@ createServer(async (request, response) => {
         //pipeTo é a ultima etapa
         .pipeTo(new WritableStream({
             async write(chunk) {
-                await setTimeout(1000)
+                await setTimeout(100)
                 items++;
                 response.write(chunk)
             },
